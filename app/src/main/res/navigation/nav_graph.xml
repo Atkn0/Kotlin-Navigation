@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bir">
+
+    <fragment
+        android:id="@+id/bir"
+        android:name="com.example.navtest.Bir"
+        android:label="fragment_bir"
+        tools:layout="@layout/fragment_bir" >
+        <action
+            android:id="@+id/action_bir_to_iki"
+            app:destination="@id/iki" />
+    </fragment>
+    <fragment
+        android:id="@+id/iki"
+        android:name="com.example.navtest.iki"
+        android:label="fragment_iki"
+        tools:layout="@layout/fragment_iki" >
+        <action
+            android:id="@+id/action_iki_to_uc"
+            app:destination="@id/uc" />
+    </fragment>
+    <fragment
+        android:id="@+id/uc"
+        android:name="com.example.navtest.uc"
+        android:label="fragment_uc"
+        tools:layout="@layout/fragment_uc" >
+        <action
+            android:id="@+id/action_uc_to_bir"
+            app:destination="@id/bir" />
+    </fragment>
+</navigation>
